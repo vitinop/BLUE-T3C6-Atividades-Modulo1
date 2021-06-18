@@ -9,3 +9,5 @@ sortnumber = (randint(0,50),randint(0,50),randint(0,50),randint(0,50),randint(0,
 
 print(f"""O menor numero é: {min(sortnumber)} 
 O maior numero maior é: {max(sortnumber)} """) 
+for list in range[0,5]:
+    print(list)
