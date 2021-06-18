@@ -9,6 +9,7 @@ for i in range(quantJogos):
     lista=[]
     while True:
         numero=randint(1,60)
+        numero.sort()
         if numero not in lista:
             lista.append(numero)
         if len(lista) == 6:
