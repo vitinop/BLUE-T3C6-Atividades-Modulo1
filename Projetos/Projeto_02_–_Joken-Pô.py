@@ -45,10 +45,10 @@ while True:
         rodadas=int(input("Gostaria de jogar quantas rodadas? Vence o jogador que atigir o maior numero de pontos ao fim das rodadas:  "))
         for i in range(rodadas):
             print(f"""                  Contador de Pontos
-
+            _____________________________
             [pink]Jogador:{contadorvitorias}         Máquina:{contadorderrotas}[/pink]
 
-                    Rodada: {i+1}|{rodadas}""")     
+                    Rodada: {i+1}|{rodadas}""")      
             print(f""" 
             [1] Pedra 
             [red]{pedra}[/red]""")
@@ -61,7 +61,11 @@ while True:
             jogada=int(input("Selecione a sua jogada :"))
             jogadadamaquina= randint(1,3)
             os.system('cls' if os.name == 'nt' else 'clear')
-                     
+            print(f"""                  Contador de Pontos
+            ____________________________
+            [pink]Jogador:{contadorvitorias}         Máquina:{contadorderrotas}[/pink]
+
+                    Rodada: {i+1}|{rodadas}""")                     
             if jogada==1:
                 if jogadadamaquina==1:
                     i=i-1
@@ -108,12 +112,6 @@ while True:
             elif jogadadamaquina==3:
                 print(f"""A Maquina lança
                         [red]{tesoura}[/red]""")
-            print(f"""                  Contador de Pontos
-
-            [pink]Jogador:{contadorvitorias}         Máquina:{contadorderrotas}[/pink]
-
-                    Rodada: {i+1}|{rodadas}""")               
-            
             sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')        
         if contadorvitorias>contadorderrotas: 
