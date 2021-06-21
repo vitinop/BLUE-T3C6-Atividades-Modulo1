@@ -164,9 +164,4 @@ while True:
              contadorderrotas=0 
         elif votacao == 'N':
             break
-       
         
-
-        
-               
-                
