@@ -17,7 +17,6 @@ from time import sleep
 contadorvitorias=0
 contadorderrotas=0
 jogadadamaquina=0
-
 votacao=""
 pedra=("""
               _______
@@ -42,6 +41,7 @@ tesoura=("""
         -----.__(___)""")
 while True:
         print("[green]Olá, bem vindo a jogodo pedra,papel,tesoura :D[/green]")
+        
         rodadas=int(input("Gostaria de jogar quantas rodadas? Vence o jogador que atigir o maior numero de pontos ao fim das rodadas:  "))
         for i in range(rodadas):
             print(f"""                  Contador de Pontos
@@ -65,10 +65,14 @@ while True:
             ____________________________
             [pink]Jogador:{contadorvitorias}         Máquina:{contadorderrotas}[/pink]
 
-                    Rodada: {i+1}|{rodadas}""")                     
+                    Rodada: {i+1}|{rodadas}""")
+            print("JO")      
+            sleep(0.5)
+            print("KEN")
+            sleep(0.5)
+            print("POOH!!!\n")                     
             if jogada==1:
                 if jogadadamaquina==1:
-                    i=i-1
                     print("Empate!") 
                 elif jogadadamaquina==2:
                     contadorderrotas=contadorderrotas+1
@@ -83,7 +87,6 @@ while True:
                     print("Você Ganhou!")
                     contadorvitorias=contadorvitorias+1  
                 elif jogadadamaquina==2:
-                    i=i-1
                     print("Empate!")
                 elif jogadadamaquina==3:
                     contadorderrotas=contadorderrotas+1
@@ -98,7 +101,6 @@ while True:
                     print("Você Ganhou!")
                     contadorvitorias=contadorvitorias+1 
                 elif jogadadamaquina==3:
-                    i=i-1
                     print("Empate!")
                 print(f"""O Jogador lança
                     [green]{tesoura}[/green]""")                                    
@@ -131,17 +133,39 @@ while True:
             ⣿⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸
             """)
         elif contadorvitorias<contadorderrotas:
-            print("Você foi derrotado pela maquina :/ ")
+            print("""Você foi derrotado pela maquina 
+            [blue]
+            ▄██████████████▄▐█▄▄▄▄█▌
+            ██████▌▄▌▄▐▐▌███▌▀▀██▀▀
+            ████▄█▌▄▌▄▐▐▌▀███▄▄█▌
+            ▄▄▄▄▄██████████████▀[/blue] """)        
         else:
-            print("Empate") 
+            print("""O Jogo ficou empatado !
+            
+            ░░░░░░░█▐▓▓░████▄▄▄█▀▄▓▓▓▌█
+            ░░░░░▄█▌▀▄▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█
+            ░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█
+            ░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌
+            ░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█
+            ▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌
+            █▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█
+            █▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█
+            ▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌
+            ▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌
+            █▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█ """)
         print(f""" PLACAR FINAL :     
                 A maquina ganhou {contadorderrotas} rodadas
                 Você venceu {contadorvitorias} rodadas
                 Ao todo houve um total de {rodadas-(contadorderrotas+contadorvitorias)} de rodadas empatadas""")
         votacao = str(input("Gostaria jogar novamente? [S/N]: ")).upper().strip()[0]
-        os.system('cls' if os.name == 'nt' else 'clear') 
-        if votacao == 'N':
+        os.system('cls' if os.name == 'nt' else 'clear')
+        if votacao == 'S':
+             contadorvitorias=0
+             contadorderrotas=0 
+        elif votacao == 'N':
             break
+       
+        
 
         
                
