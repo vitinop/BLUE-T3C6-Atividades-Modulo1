@@ -135,9 +135,9 @@ while True:
         elif contadorvitorias<contadorderrotas:
             print("""Você foi derrotado pela maquina 
             [blue]
-            ▄██████████████▄▐█▄▄▄▄█▌
-            ██████▌▄▌▄▐▐▌███▌▀▀██▀▀
-            ████▄█▌▄▌▄▐▐▌▀███▄▄█▌
+            ▄██████████████▄▄▄   ▐█▄▄▄▄█▌
+            ██████▌ ▄▌ ▄ ▐ ▐▌ ███▌▀▀██▀▀
+            ████▄█▌ ▄▌ ▄ ▐ ▐▌ ▀███▄▄█▌
             ▄▄▄▄▄██████████████▀[/blue] """)        
         else:
             print("""O Jogo ficou empatado !
