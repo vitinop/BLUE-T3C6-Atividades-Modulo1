@@ -15,12 +15,10 @@ from random import randint
 from rich import print
 from time import sleep
 import pygame
-import time
 pygame.init()
-pygame.mixer.music.load('C:\\Users\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Project2\\game_theme.wav')
+pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\game_theme.wav")
+sleep(1)
 pygame.mixer.music.play()
-time.sleep(1)
-
 contadorvitorias=0
 contadorderrotas=0
 jogadadamaquina=0
@@ -47,9 +45,9 @@ tesoura=("""
                 (____)
         -----.__(___)""")
 while True:
-        print("[green]Olá, bem vindo a jogodo pedra,papel,tesoura :D[/green]")
-        
+        print("[green]Olá, bem vindo a jogodo pedra,papel,tesoura :D[/green]")        
         rodadas=int(input("Gostaria de jogar quantas rodadas? Vence o jogador que atigir o maior numero de pontos ao fim das rodadas:  "))
+        pygame.mixer.music.stop()
         for i in range(rodadas):
             print(f"""                  Contador de Pontos
             _____________________________
