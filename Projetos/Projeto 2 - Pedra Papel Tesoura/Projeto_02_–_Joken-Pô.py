@@ -183,4 +183,3 @@ while True:
         elif votacao == 'N':
             break
         
-        
