@@ -12,8 +12,16 @@
 # de quantidade de rodadas, se não finalize o programa.
 import os
 from random import randint
-from rich import print
+#from rich import print
 from time import sleep
+import pygame
+import time
+
+pygame.init()
+pygame.mixer.music.load('Open_Theme.mp3')
+pygame.mixer.music.play()
+time.sleep(60)
+
 contadorvitorias=0
 contadorderrotas=0
 jogadadamaquina=0
