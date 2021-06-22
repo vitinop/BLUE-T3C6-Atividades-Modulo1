@@ -17,7 +17,6 @@ from time import sleep
 import pygame
 pygame.init()
 pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\game_theme.wav")
-sleep(1)
 pygame.mixer.music.play()
 contadorvitorias=0
 contadorderrotas=0
