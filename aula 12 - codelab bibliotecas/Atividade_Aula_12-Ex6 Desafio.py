@@ -7,18 +7,16 @@ import os
 alunos = dict()
 lista_alunos=list()
 continuar=""
-nome=""
 media_total=0
 notas=list()
-for i in range(0,15):
-    nome= input("Insira o nome do aluno: ")
+while True:
+    alunos['Nome']= str(input("Insira o nome do aluno: "))
     for j in range (1,6):
         nota= float(input(f"""Insira a nota do aluno no {j}º bimestre: """)) #considerando o valor bimestral valendo 100 pontos
         notas.append(nota)
         media_total=(media_total+nota)  
     media_total=(media_total)/5
-    alunos['Nome']= nome
-    alunos['Nota']= notas
+    alunos['Notas']= notas
     alunos['Média'] = media_total
     if media_total>=50 and media_total<=69.5:
         alunos['Situação']= "Recuperação"
@@ -32,7 +30,9 @@ for i in range(0,15):
       
     lista_alunos.append(alunos.copy())
     print(f"A situação atual do aluno é: {alunos}")
-    print("A lista da situação de todos alunos é :")   
+    print("A lista da situação de todos alunos é :")
+    for i in lista_alunos:
+        print(f'{i}')   
     
     continuar = str(input("Gostaria de encerrar o programa? [S/N]: ")).upper().strip()[0]
     if continuar == 'S':
