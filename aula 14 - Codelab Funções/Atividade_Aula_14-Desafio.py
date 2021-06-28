@@ -10,13 +10,16 @@ def data(value):#DD/MM/AAAA
     dia =(value[0:2])
     dia=int(dia)
     mes_chave = value[3:5]
+    mes_numero =int(mes_chave)
     ano =value[6:10]
-    ano=int(ano)    
-    if ano%4==0 and mes_chave=="02":
+    ano=int(ano)
+    if mes_numero>12 or mes_numero<1:
+        return f"Mês inválido, insira um mês válido:"
+    elif ano%4==0 and mes_chave=="02":
         if dia>29:
             return f"Dia invalido, fevereiro possui 29 dias em anos bissextos"
     elif mes_chave=="02" and dia>28:
-        return f"Dia invalido, fevereiro possui 28 dias em anos não bissextos"
+            return f"Dia invalido, fevereiro possui 28 dias em anos não bissextos"
     return f'{dia} de {mes[mes_chave]} de {ano}'
 
 #Main Program
