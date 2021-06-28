@@ -69,19 +69,21 @@ while True:
     sleep(1)
     print(f'='*30)
     vitPlayer1 = vitPlayer2 = vitPlayer3 = vitPlayer4 = 0 # Contadores para os resultados das rodadas
-    print('[yellow]ROLANDO OS DADOS...')
-    print()
-    for i in tqdm(range(100)): # Barra de progresso lib TDQM para decoração do jogo
-        sleep(0.001)
-    print()
     dadosResult = list() # criação das lista temporária para receber o resultado dos dados
     for r in range(rodadas):
+        print('[yellow]ROLANDO OS DADOS...')
+        for i in tqdm(range(100)): # Barra de progresso lib TDQM para decoração do jogo
+            sleep(0.001)
+        print()
+        pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 3 - Jogo de Dados\\roll-dice.wav")
+        pygame.mixer.music.play()
+        print(f"{r + 1}º rodada:")
         rodada['player1'] = randint(1, 6) # Randint para gerar números aleatórios dos dados
         rodada['player2'] = randint(1, 6)
         rodada['player3'] = randint(1, 6)
         rodada['player4'] = randint(1, 6)
         sleep(1)
-        print(f"{r + 1}º rodada: {rodada}")
+        
         for player in rodada.keys():
             print(f"{player}{dado['dado'+str(rodada[player])]}")
             sleep(1)
@@ -102,6 +104,8 @@ while True:
         os.system('cls' if os.name == 'nt' else 'clear') #Comando para limpar console
         sleep(1)
     (f'='*30)
+    pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 3 - Jogo de Dados\\In-The-End.wav")
+    pygame.mixer.music.play()
     if (vitPlayer2 < vitPlayer1 > vitPlayer3) and vitPlayer1 > vitPlayer4: # Estrutura condicional para demonstrar quem ganhou mais rodadas
         print(f"O Campeão é o Jogador 1 com {vitPlayer1} vitórias.")
     elif (vitPlayer3 < vitPlayer2 > vitPlayer1) and vitPlayer2 > vitPlayer4:
