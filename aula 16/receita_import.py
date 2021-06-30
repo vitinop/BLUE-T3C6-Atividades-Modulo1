@@ -1,1 +1,1 @@
-from aula16.receita import Receita
+from .receita import Receita
