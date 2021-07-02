@@ -19,7 +19,7 @@ class Conta:
         Saldo: R$ {self.saldo:.2f}'''
 
 
-pessoa1 = Conta('Felipe Menezes Silva Sá', 548.71)
+pessoa1 = Conta('Nome', 548.71)
 print(pessoa1.mostrarDados())
 
 pessoa1.sacar(600)

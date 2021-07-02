@@ -14,7 +14,7 @@ from rich import print #Biblioteca para decorar os textos
 import pygame
 rodada = dict() # Criação de dicionário temporário que receberá as informações de cada rodada
 pygame.init()
-pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 3 - Jogo de Dados\\Turtles-open.wav")
+pygame.mixer.music.load('Turtles-open.wav')
 pygame.mixer.music.play()
 
 print(f"""[green]

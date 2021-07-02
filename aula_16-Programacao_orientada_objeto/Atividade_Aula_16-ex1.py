@@ -19,7 +19,7 @@ class Pessoa:
             Idade: {self.idadePessoa}
             Peso: {self.pesoPessoa} kg'''
 
-pessoa1 = Pessoa('Felipe', 23, 75)
+pessoa1 = Pessoa('nome', 23, 75)
 
 print(pessoa1.mostrarDados())
 
