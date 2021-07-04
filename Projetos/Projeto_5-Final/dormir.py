@@ -1,4 +1,5 @@
 class Dormir:
+    from .relogio import Relogio
     def __init__(self,energia,paranoia,fome,horas=8,tempo):
         self.energia=energia+(10*horas)
         self.paranoia=paranoia-(5*horas)
