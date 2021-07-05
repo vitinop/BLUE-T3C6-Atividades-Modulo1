@@ -11,6 +11,7 @@
 # • Perguntar se o Jogador quer jogar novamente, se sim inicie volte a escolha
 # de quantidade de rodadas, se não finalize o programa.
 import os
+from os import getcwd
 from random import randint
 from rich import print
 from time import sleep
@@ -43,7 +44,7 @@ tesoura=("""
         -----.__(___)""")
 while True:
         print("[green]Olá, bem vindo a jogodo pedra,papel,tesoura :D[/green]")
-        pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\game_theme.wav")
+        pygame.mixer.music.load(getcwd() + '\\game_theme.wav')
         pygame.mixer.music.play()        
         rodadas=int(input("Gostaria de jogar quantas rodadas? Vence o jogador que atigir o maior numero de pontos ao fim das rodadas:  "))
         pygame.mixer.music.stop()
@@ -74,7 +75,7 @@ while True:
             sleep(0.5)
             print("POOH!!!\n")                     
             if jogada==1:
-                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\stone.wav")
+                pygame.mixer.music.load(getcwd() + '/stone.wav')
                 pygame.mixer.music.play()
                 if jogadadamaquina==1:
                     print("Empate!") 
@@ -87,7 +88,7 @@ while True:
                 print(f"""O Jogador lança
                         [green]{pedra}[/green]""")
             elif jogada==2:
-                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\paper.wav")
+                pygame.mixer.music.load(getcwd() + '/paper.wav')
                 pygame.mixer.music.play()
                 if jogadadamaquina==1:
                     print("Você Ganhou!")
@@ -100,7 +101,7 @@ while True:
                 print(f"""O Jogador lança
                         [green]{papel}[/green]""")
             elif jogada==3:
-                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\razor.wav")
+                pygame.mixer.music.load(getcwd() + 'razor.wav')
                 pygame.mixer.music.play()
                 if jogadadamaquina==1:
                     contadorderrotas=contadorderrotas+1
@@ -140,7 +141,7 @@ while True:
             ⣿⣿⠋⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸
             ⣿⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸
             """)
-            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\stage-clear-8-bit.wav")
+            pygame.mixer.music.load(getcwd() + 'stage-clear-8-bit.wav')
             pygame.mixer.music.play()
         elif contadorvitorias<contadorderrotas:
             print("""Você foi derrotado pela maquina 
@@ -149,7 +150,7 @@ while True:
             ██████▌ ▄▌ ▄ ▐ ▐▌ ███▌▀▀██▀▀
             ████▄█▌ ▄▌ ▄ ▐ ▐▌ ▀███▄▄█▌
             ▄▄▄▄▄██████████████▀[/blue] """)
-            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\game-lose.wav")
+            pygame.mixer.music.load(getcwd() + 'game-lose.wav')
             pygame.mixer.music.play()       
         else:
             print("""O Jogo ficou empatado !
@@ -165,7 +166,7 @@ while True:
             ▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌
             ▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌
             █▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█ """)
-            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\draw-game.wav")
+            pygame.mixer.music.load(getcwd() + 'draw-game.wav')
             pygame.mixer.music.play()  
         print(f""" PLACAR FINAL :     
                 A maquina ganhou {contadorderrotas} rodadas
