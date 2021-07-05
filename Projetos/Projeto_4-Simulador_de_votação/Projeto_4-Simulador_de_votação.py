@@ -22,74 +22,48 @@
 import os                       # Biblioteca para limpar o terminal.
 from time import sleep          # Biblioteca para adicionar deley as ações. 
 import pygame                   # Biblioteca para adicionar som.
+import datetime                 # Biblioteca para importar a data do computador
+total_votos = 0
 
-class Votacao:  
-        def __init__(self,ano_nascimento=0,idade_Pessoa=0):
-            import datetime
-            now=datetime.datetime.now()
-            ano_atual = now.year
-            self.ano_nascimento=input("Informe seu ano de nascimento")
-            self.idade_Pessoa=ano_atual-self.ano_nascimento
-        
-        def autoriza_voto_func(self,autoriza_voto=''):
-            if self.idade_Pessoa<16:
-                self.autoriza_voto="NEGADO"
-            elif self.idade_Pessoa>=70:
-                self.autoriza_voto="OPCIONAL"
-            else:
-                self.autoriza_voto="OBRIGATÓRIA"
 
-        def votação_func(self,voto=0):
-            if self.autoriza_voto="NEGADO":
-                return f"Você não pode votar"
-            else:
-                self.total_votos +=1
+def autoriza_voto_func(idade_Pessoa,autoriza_voto=''):
+        if idade_Pessoa<16:
+            autoriza_voto="NEGADO"
+            return f'Voto Negado - Você não possui idade suficiente para votar'
+        elif idade_Pessoa>=70:
+            return f'Voto Opcional'
+        else:
+            autoriza_voto="OBRIGATÓRIA"
+            return f'Voto Obrigatório'
 
-                if voto == 1:
-                jose = jose + 1
-                return f"Voto no canditadato José computado com sucesso"
-                
-                elif voto == 2:
-                joao = joao +1
-                return f"Voto no canditadato João computado com sucesso"
-                
-                elif voto == 3:
-                antonio = antonio+1
-                return f"Voto no canditadato Antônio computado com sucesso"
-                
-                elif voto == 4:
-                votobranco += 1
-                print("Voto em branco computado com sucesso")
-                
-                elif voto >= 5 or voto<1:
-                votonulo += 1
-                print("Voto nulo computado com sucesso")
-                
-            
 
-        print(f"""
-        CÓDIGO DO CANDIDATO   - NOME DO CANDIDATO   
+while True:
+    now=datetime.datetime.now()
+    ano_atual = now.year
+    ano_nascimento=int(input("Informe seu ano de nascimento: "))
+    idade_Pessoa=ano_atual-ano_nascimento
+    print(f"""
+            CÓDIGO DO CANDIDATO   - NOME DO CANDIDATO   
 
-                            1 - JOSÉ
-                            2 - JOÃO
-                            3 - ANTÔNIO
-                            4 - BRANCO
-                            5 - NULO
-        """)
-
-while True:        
-    
+                                1 - JOSÉ
+                                2 - JOÃO
+                                3 - ANTÔNIO
+                                4 - BRANCO
+                                5 - NULO
+            """)            
     votacao_init = input("Gostaria de encerrar a votação? [S/N]: ").upper().strip()[0]
         if votacao == 'S':
             break
-    pernulo = 100*(votonulo/totaldevotos)
-    perbranco = 100*(votobranco/totaldevotos)
-    print(f"""O numero de votos do candidato José           : {jose}
-    O numero de votos do candidato João                     : {joao}
-    O numero de votos do candidato Antônio                  : {antonio}
-    O numero de votos do candidato Carlos                   : {carlos}
-    O total de votos nulos é                                : {votonulo}
-    O total de votos em branco é                            : {votobranco}
-    A percentagem de votos nulos sobre o total de votos é   : {pernulo:.2f} %
-    A percentagem de votos em branco sobre o total de votos : {perbranco:.2f}%
-    """)
+        
+        
+pernulo = 100*(votonulo/totaldevotos)
+perbranco = 100*(votobranco/totaldevotos)
+print(f"""O numero de votos do candidato José           : {jose}
+O numero de votos do candidato João                     : {joao}
+O numero de votos do candidato Antônio                  : {antonio}
+O numero de votos do candidato Carlos                   : {carlos}
+O total de votos nulos é                                : {votonulo}
+O total de votos em branco é                            : {votobranco}
+A percentagem de votos nulos sobre o total de votos é   : {pernulo:.2f} %
+A percentagem de votos em branco sobre o total de votos : {perbranco:.2f}%
+""")

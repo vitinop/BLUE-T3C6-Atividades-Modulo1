@@ -16,8 +16,6 @@ from rich import print
 from time import sleep
 import pygame
 pygame.init()
-pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\game_theme.wav")
-pygame.mixer.music.play()
 contadorvitorias=0
 contadorderrotas=0
 jogadadamaquina=0
@@ -45,7 +43,7 @@ tesoura=("""
         -----.__(___)""")
 while True:
         print("[green]Olá, bem vindo a jogodo pedra,papel,tesoura :D[/green]")
-        pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\game_theme.wav")
+        pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\game_theme.wav")
         pygame.mixer.music.play()        
         rodadas=int(input("Gostaria de jogar quantas rodadas? Vence o jogador que atigir o maior numero de pontos ao fim das rodadas:  "))
         pygame.mixer.music.stop()
@@ -53,7 +51,6 @@ while True:
             print(f"""                  Contador de Pontos
             _____________________________
             [pink]Jogador:{contadorvitorias}         Máquina:{contadorderrotas}[/pink]
-
                     Rodada: {i+1}|{rodadas}""")      
             print(f""" 
             [1] Pedra 
@@ -70,7 +67,6 @@ while True:
             print(f"""                  Contador de Pontos
             ____________________________
             [pink]Jogador:{contadorvitorias}         Máquina:{contadorderrotas}[/pink]
-
                     Rodada: {i+1}|{rodadas}""")
             print("JO")      
             sleep(0.5)
@@ -78,7 +74,7 @@ while True:
             sleep(0.5)
             print("POOH!!!\n")                     
             if jogada==1:
-                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\stone.wav")
+                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\stone.wav")
                 pygame.mixer.music.play()
                 if jogadadamaquina==1:
                     print("Empate!") 
@@ -91,7 +87,7 @@ while True:
                 print(f"""O Jogador lança
                         [green]{pedra}[/green]""")
             elif jogada==2:
-                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\paper.wav")
+                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\paper.wav")
                 pygame.mixer.music.play()
                 if jogadadamaquina==1:
                     print("Você Ganhou!")
@@ -104,7 +100,7 @@ while True:
                 print(f"""O Jogador lança
                         [green]{papel}[/green]""")
             elif jogada==3:
-                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\razor.wav")
+                pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\razor.wav")
                 pygame.mixer.music.play()
                 if jogadadamaquina==1:
                     contadorderrotas=contadorderrotas+1
@@ -144,7 +140,7 @@ while True:
             ⣿⣿⠋⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸
             ⣿⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸
             """)
-            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\stage-clear-8-bit.wav")
+            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\stage-clear-8-bit.wav")
             pygame.mixer.music.play()
         elif contadorvitorias<contadorderrotas:
             print("""Você foi derrotado pela maquina 
@@ -153,7 +149,7 @@ while True:
             ██████▌ ▄▌ ▄ ▐ ▐▌ ███▌▀▀██▀▀
             ████▄█▌ ▄▌ ▄ ▐ ▐▌ ▀███▄▄█▌
             ▄▄▄▄▄██████████████▀[/blue] """)
-            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\game-lose.wav")
+            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\game-lose.wav")
             pygame.mixer.music.play()       
         else:
             print("""O Jogo ficou empatado !
@@ -169,7 +165,7 @@ while True:
             ▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌
             ▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌
             █▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█ """)
-            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto 2 - Pedra Papel Tesoura\\draw-game.wav")
+            pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_2-Pedra_Papel_Tesoura\\draw-game.wav")
             pygame.mixer.music.play()  
         print(f""" PLACAR FINAL :     
                 A maquina ganhou {contadorderrotas} rodadas
@@ -182,4 +178,3 @@ while True:
              contadorderrotas=0 
         elif votacao == 'N':
             break
-        
