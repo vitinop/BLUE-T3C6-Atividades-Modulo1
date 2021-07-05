@@ -20,15 +20,12 @@
 # ● O total de votos em branco;
 # ● Qual candidato venceu a votaçãojose = joao = antonio = carlos = totaldevotos = votobranco = votonulo =pernulo = perbranco =0
 import os                       # Biblioteca para limpar o terminal.
-# from os import getcwd           #
 from time import sleep          # Biblioteca para adicionar deley as ações. 
-# import pygame                   # Biblioteca para adicionar som.
+import pygame                   # Biblioteca para adicionar som.
 import datetime                 # Biblioteca para importar a data do computador
-
 lista_votos= list([0,0,0,0,0])
-
 continuar_votando=''
-
+pygame.init()
 def autoriza_voto_func(idade_Pessoa): #Função para verificação de idade para autorizar ou nao o voto do usuário
     if idade_Pessoa<16:
         return 'Voto Negado'
@@ -39,9 +36,16 @@ def autoriza_voto_func(idade_Pessoa): #Função para verificação de idade para
 
 
 def votacao_Func(voto=0): #Função para atribuição de um voto válido para um dos candidatos
-    # pygame.init()
-    # pygame.mixer.music.load(getcwd() + 'voto_confirmado.mp3')
-    # totaldevotos += 1
+    pygame.mixer.music.load("C:\\Users\\Victor Luz\\Desktop\\Blue\\Repositório Módulo 1\\GitHub\\BLUE-T3C6-Atividades-Modulo1\\Projetos\\Projeto_4-Simulador_de_votação\\voto_confirmado.mp3")
+    print("Computando voto.")    
+    sleep(0.5)
+    print(".")
+    sleep(0.5)
+    print(".")
+    sleep(0.5)
+    print(".\n")
+    sleep(0.5)
+    pygame.mixer.music.play()
     if voto == 1:
         return ["Voto no canditadato José computado com sucesso",0]
     elif voto == 2:
@@ -52,9 +56,7 @@ def votacao_Func(voto=0): #Função para atribuição de um voto válido para um
         return ["Voto em branco computado com sucesso",3]
     elif voto >= 5:
         return ["Voto nulo computado com sucesso",4]
-    else:
-        return "Valor inválido"
-    # pygame.mixer.music.play()
+    
 
 
 def estatisticas_de_voto(jose, joao, antonio, votonulo, votobranco):     #Função para exibição de todas estaticas da votação para o usuário final
@@ -65,25 +67,24 @@ def estatisticas_de_voto(jose, joao, antonio, votonulo, votobranco):     #Funç�
     _____________________________________________________________________________________
     |                       NOMES                            |          VOTOS            |
     |________________________________________________________|___________________________|
-    |O numero de votos do candidato José                     | {lista_votos[0]}          
-    |O numero de votos do candidato João                     | {lista_votos[1]}          
-    |O numero de votos do candidato Antônio                  | {lista_votos[2]}          
-    |O total de votos nulos é                                | {lista_votos[3]}         
-    |O total de votos em branco é                            | {lista_votos[4]}          
-    |A percentagem de votos nulos sobre o total de votos é   | {pernulo:.2f}%   
-    |A percentagem de votos em branco sobre o total de votos | {perbranco:.2f}%
-    |O total de votos é                                      | {totalvotos}
-    |________________________________________________________|____________________________|
+    |O numero de votos do candidato José                     | {lista_votos[0]}                         |
+    |O numero de votos do candidato João                     | {lista_votos[1]}                         |
+    |O numero de votos do candidato Antônio                  | {lista_votos[2]}                         |
+    |O total de votos nulos é                                | {lista_votos[3]}                         |
+    |O total de votos em branco é                            | {lista_votos[4]}                         |
+    |A percentagem de votos nulos sobre o total de votos é   | {pernulo:.2f}%                     |
+    |A percentagem de votos em branco sobre o total de votos | {perbranco:.2f}%                     |
+    |O total de votos é                                      | {totalvotos}                         |
+    |________________________________________________________|___________________________|
 
     """)
  
+
 while True:
     now=datetime.datetime.now()
     ano_atual = now.year
     ano_nascimento=int(input("Informe seu ano de nascimento: "))
     idade_Pessoa=ano_atual-ano_nascimento
-    print("Computando voto\n.\n.\n.")
-    sleep[1]
     if autoriza_voto_func(idade_Pessoa)=='Voto Opcional' or autoriza_voto_func(idade_Pessoa)=='Voto Obrigatório':
         print(f"""
             CÓDIGO DO CANDIDATO   - NOME DO CANDIDATO   
@@ -102,8 +103,7 @@ while True:
     else:
         print(" Você não está autorizado a votar")
     continuar_votando = input("Gostaria de encerrar a votação? [S/N]: ").upper().strip()[0]
+    os.system('cls' if os.name == 'nt' else 'clear')
     if continuar_votando == 'S':
         break        
 estatisticas_de_voto(lista_votos[0],lista_votos[1], lista_votos[2], lista_votos[3], lista_votos[4])
-
-  
