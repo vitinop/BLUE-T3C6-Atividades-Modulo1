@@ -70,11 +70,11 @@ def estatisticas_de_voto(jose, joao, antonio, votonulo, votobranco):     #Funç�
     |O numero de votos do candidato José                     | {lista_votos[0]}                         |
     |O numero de votos do candidato João                     | {lista_votos[1]}                         |
     |O numero de votos do candidato Antônio                  | {lista_votos[2]}                         |
-    |O total de votos nulos é                                | {lista_votos[3]}                         |
-    |O total de votos em branco é                            | {lista_votos[4]}                         |
-    |A percentagem de votos nulos sobre o total de votos é   | {pernulo:.2f}%                     |
+    |O total de votos nulos                                  | {lista_votos[3]}                         |
+    |O total de votos em branco                              | {lista_votos[4]}                         |
+    |A percentagem de votos nulos sobre o total de votos     | {pernulo:.2f}%                     |
     |A percentagem de votos em branco sobre o total de votos | {perbranco:.2f}%                     |
-    |O total de votos é                                      | {totalvotos}                         |
+    |O total de votos                                        | {totalvotos}                         |
     |________________________________________________________|___________________________|
 
     """)
