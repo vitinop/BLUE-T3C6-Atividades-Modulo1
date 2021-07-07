@@ -26,7 +26,8 @@ import datetime                 # Biblioteca para importar a data do computador
 lista_votos= list([0,0,0,0,0])
 continuar_votando=''
 pygame.init()
-def autoriza_voto_func(idade_Pessoa): #Função para verificação de idade para autorizar ou nao o voto do usuário
+
+def autoriza_voto_Func(idade_Pessoa): #Função para verificação de idade para autorizar ou nao o voto do usuário
     if idade_Pessoa<16:
         return 'Voto Negado'
     elif idade_Pessoa>=70:
@@ -58,8 +59,7 @@ def votacao_Func(voto=0): #Função para atribuição de um voto válido para um
         return ["Voto nulo computado com sucesso",4]
     
 
-
-def estatisticas_de_voto(jose, joao, antonio, votonulo, votobranco):     #Função para exibição de todas estaticas da votação para o usuário final
+def estatisticas_de_voto_Func(jose, joao, antonio, votonulo, votobranco): #Função para exibição de todas estaticas da votação para o usuário final
     totalvotos=(lista_votos[0]+lista_votos[1]+lista_votos[2]+lista_votos[3]+lista_votos[4])
     pernulo = 100*(lista_votos[3]/totalvotos)
     perbranco = 100*(lista_votos[4]/totalvotos)
@@ -85,7 +85,7 @@ while True:
     ano_atual = now.year
     ano_nascimento=int(input("Informe seu ano de nascimento: "))
     idade_Pessoa=ano_atual-ano_nascimento
-    if autoriza_voto_func(idade_Pessoa)=='Voto Opcional' or autoriza_voto_func(idade_Pessoa)=='Voto Obrigatório':
+    if autoriza_voto_Func(idade_Pessoa)=='Voto Opcional' or autoriza_voto_Func(idade_Pessoa)=='Voto Obrigatório':
         print(f"""
             CÓDIGO DO CANDIDATO   - NOME DO CANDIDATO   
 
@@ -106,4 +106,4 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')
     if continuar_votando == 'S':
         break        
-estatisticas_de_voto(lista_votos[0],lista_votos[1], lista_votos[2], lista_votos[3], lista_votos[4])
+estatisticas_de_voto_Func(lista_votos[0],lista_votos[1], lista_votos[2], lista_votos[3], lista_votos[4])
